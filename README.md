@@ -86,3 +86,286 @@ Project tree
 - `models`: This directory contains the model classes that represent the entities in the system, such as `Car`, `Customer`, `Dealer`, and `Order`. These model classes define the structure of the data and provide getter and setter methods for accessing and modifying the data.
 
 - `CarDealerApplication`: This is the main class of the Spring Boot application, which serves as the entry point for the application. It contains the `main` method that starts the Spring Boot application and sets up the Spring context.
+
+-   `controllers`: This directory contains the controllers that handle incoming HTTP requests and define the REST endpoints for the Car, Customer, Dealer, and Order resources. These controllers are responsible for receiving requests, processing them, and returning appropriate responses.
+
+-   `services`: This directory contains the service classes that implement the business logic for the Car, Customer, Dealer, and Order resources. These services are responsible for processing the business logic, interacting with the repositories, and performing operations such as creating, updating, retrieving, and deleting records in the database.
+
+-   `repositories`: This directory contains the repository interfaces that define the methods for interacting with the database to perform CRUD (Create, Read, Update, Delete) operations on the Car, Customer, Dealer, and Order entities. These repository interfaces are used by the service classes to communicate with the database and perform database operations.
+
+-   `utils`: This directory contains utility classes such as `ApiError`, `ApiResponse`, and `Constants` that provide common functionalities that are used across the project, such as handling API errors, defining standard API response formats, and storing constants.
+
+-   `exceptions`: This directory contains exception classes that handle specific types of exceptions that may occur during the execution of the application, such as `ApiException` and `ErrorDetails`. These exception classes provide custom error handling and can be used to handle specific exceptions that occur in the application.
+
+-   `config`: This directory contains configuration classes, such as `SwaggerConfig`, which is used to configure Swagger, an API documentation tool, to generate documentation for the REST APIs in the project.
+
+-   `models`: This directory contains the model classes that represent the entities in the system, such as `Car`, `Customer`, `Dealer`, and `Order`. These model classes define the structure of the data and provide getter and setter methods for accessing and modifying the data.
+
+-   `CarDealerApplication`: This is the main class of the Spring Boot application, which serves as the entry point for the application. It contains the `main` method that starts the Spring Boot application and sets up the Spring context.Available REST APIs
+===================
+
+Cars API
+--------
+
+-   Endpoint: `/api/cars`
+
+-   Method: `GET`
+
+-   Description: Get a list of all cars.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: List of cars in JSON format.
+-   Endpoint: `/api/cars/{id}`
+
+-   Method: `GET`
+
+-   Description: Get a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Car information in JSON format.
+-   Endpoint: `/api/cars`
+
+-   Method: `POST`
+
+-   Description: Create a new car.
+
+-   Request Body: Car information in JSON format.
+
+-   Response:
+
+    -   Status Code: `201 (Created)`
+    -   Body: Car information of the created car in JSON format.
+-   Endpoint: `/api/cars/{id}`
+
+-   Method: `PUT`
+
+-   Description: Update a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Request Body: Updated car information in JSON format.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Updated car information in JSON format.
+-   Endpoint: `/api/cars/{id}`
+
+-   Method: `DELETE`
+
+-   Description: Delete a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Response:
+
+    -   Status Code: `204 (No Content)`
+
+Customers API
+-------------
+
+-   Endpoint: `/api/customers`
+
+-   Method: `GET`
+
+-   Description: Get a list of all customers.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: List of customers in JSON format.
+-   Endpoint: `/api/customers/{id}`
+
+-   Method: `GET`
+
+-   Description: Get a customer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the customer.
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Customer information in JSON format.
+-   Endpoint: `/api/customers`
+
+-   Method: `POST`
+
+-   Description: Create a new customer.
+
+-   Request Body: Customer information in JSON format.
+
+-   Response:
+
+    -   Status Code: `201 (Created)`
+    -   Body: Customer information of the created customer in JSON format.
+-   Endpoint: `/api/customers/{id}`
+
+-   Method: `PUT`
+
+-   Description: Update a customer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the customer.
+-   Request Body: Updated customer information in JSON format.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Updated customer information in JSON format.
+-   Endpoint: `/api/customers/{id}`
+
+-   Method: `DELETE`
+
+-   Description: Delete a customer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the customer.
+-   Response:
+
+    -   Status Code: `204 (No Content)`
+
+Dealers API
+-----------
+
+-   Endpoint: `/api/dealers`
+
+-   Method: `GET`
+
+-   Description: Get a list of all dealers.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: List of dealers in JSON format.
+-   Endpoint: `/api/dealers/{id}`
+
+-   Method: `GET`
+
+-   Description: Get a dealer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the dealer.
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Dealer information in JSON format.
+-   Endpoint: `/api/dealers`
+
+-   Method: `POST`
+
+-   Description: Create a new dealer.
+
+-   Request Body:Dealer information in JSON format.
+
+-   Response:
+
+    -   Status Code: `201 (Created)`
+    -   Body: Dealer information of the created dealer in JSON format.
+-   Endpoint: `/api/dealers/{id}`
+
+-   Method: `PUT`
+
+-   Description: Update a dealer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the dealer.
+-   Request Body: Updated dealer information in JSON format.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Updated dealer information in JSON format.
+-   Endpoint: `/api/dealers/{id}`
+
+-   Method: `DELETE`
+
+-   Description: Delete a dealer by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the dealer.
+-   Response:
+
+    -   Status Code: `204 (No Content)`
+
+Orders API
+----------
+
+-   Endpoint: `/api/orders`
+
+-   Method: `GET`
+
+-   Description: Get a list of all orders.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: List of orders in JSON format.
+-   Endpoint: `/api/orders/{id}`
+
+-   Method: `GET`
+
+-   Description: Get an order by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the order.
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Order information in JSON format.
+-   Endpoint: `/api/orders`
+
+-   Method: `POST`
+
+-   Description: Create a new order.
+
+-   Request Body: Order information in JSON format.
+
+-   Response:
+
+    -   Status Code: `201 (Created)`
+    -   Body: Order information of the created order in JSON format.
+-   Endpoint: `/api/orders/{id}`
+
+-   Method: `PUT`
+
+-   Description: Update an order by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the order.
+-   Request Body: Updated order information in JSON format.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Updated order information in JSON format.
+-   Endpoint: `/api/orders/{id}`
+
+-   Method: `DELETE`
+
+-   Description: Delete an order by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the order.
+-   Response:
+
+    -   Status Code: `204 (No Content)`
+
+Note: Replace `{id}` in the endpoint URLs with the actual ID value for specific resource operations. Also, make sure to include the necessary request body and request headers, as required by your API implementation.

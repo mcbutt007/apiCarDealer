@@ -20,7 +20,7 @@ public class Car {
 	private String model;
 
 	@Column(nullable = false)
-	private int year;
+	private int productionYear;
 
 	@Column(nullable = false)
 	private double price;
@@ -39,10 +39,10 @@ public class Car {
 	public Car() {
 	}
 
-	public Car(String make, String model, int year, double price, int mileage, String color, String imageUrl) {
+	public Car(String make, String model, int productionYear, double price, int mileage, String color, String imageUrl) {
 		this.make = make;
 		this.model = model;
-		this.year = year;
+		this.productionYear = productionYear;
 		this.price = price;
 		this.mileage = mileage;
 		this.color = color;
@@ -76,11 +76,11 @@ public class Car {
 	}
 
 	public int getYear() {
-		return year;
+		return productionYear;
 	}
 
 	public void setYear(int year) {
-		this.year = year;
+		this.productionYear = year;
 	}
 
 	public double getPrice() {
