@@ -104,76 +104,9 @@ Project tree
 -   `CarDealerApplication`: This is the main class of the Spring Boot application, which serves as the entry point for the application. It contains the `main` method that starts the Spring Boot application and sets up the Spring context.Available REST APIs
 ===================
 
-Cars API
---------
-
--   Endpoint: `/api/cars`
-
--   Method: `GET`
-
--   Description: Get a list of all cars.
-
--   Response:
-
-    -   Status Code: `200 (OK)`
-    -   Body: List of cars in JSON format.
--   Endpoint: `/api/cars/{id}`
-
--   Method: `GET`
-
--   Description: Get a car by ID.
-
--   Path Parameters:
-
-    -   `id`: ID of the car.
--   Response:
-
-    -   Status Code: `200 (OK)`
-    -   Body: Car information in JSON format.
--   Endpoint: `/api/cars`
-
--   Method: `POST`
-
--   Description: Create a new car.
-
--   Request Body: Car information in JSON format.
-
--   Response:
-
-    -   Status Code: `201 (Created)`
-    -   Body: Car information of the created car in JSON format.
--   Endpoint: `/api/cars/{id}`
-
--   Method: `PUT`
-
--   Description: Update a car by ID.
-
--   Path Parameters:
-
-    -   `id`: ID of the car.
--   Request Body: Updated car information in JSON format.
-
--   Response:
-
-    -   Status Code: `200 (OK)`
-    -   Body: Updated car information in JSON format.
--   Endpoint: `/api/cars/{id}`
-
--   Method: `DELETE`
-
--   Description: Delete a car by ID.
-
--   Path Parameters:
-
-    -   `id`: ID of the car.
--   Response:
-
-    -   Status Code: `204 (No Content)`
-
 Customers API
--------------
 
--   Endpoint: `/api/customers`
+-   Endpoint: `/customers`
 
 -   Method: `GET`
 
@@ -183,7 +116,7 @@ Customers API
 
     -   Status Code: `200 (OK)`
     -   Body: List of customers in JSON format.
--   Endpoint: `/api/customers/{id}`
+-   Endpoint: `/customers/{id}`
 
 -   Method: `GET`
 
@@ -196,7 +129,7 @@ Customers API
 
     -   Status Code: `200 (OK)`
     -   Body: Customer information in JSON format.
--   Endpoint: `/api/customers`
+-   Endpoint: `/customers`
 
 -   Method: `POST`
 
@@ -208,7 +141,7 @@ Customers API
 
     -   Status Code: `201 (Created)`
     -   Body: Customer information of the created customer in JSON format.
--   Endpoint: `/api/customers/{id}`
+-   Endpoint: `/customers/{id}`
 
 -   Method: `PUT`
 
@@ -223,7 +156,7 @@ Customers API
 
     -   Status Code: `200 (OK)`
     -   Body: Updated customer information in JSON format.
--   Endpoint: `/api/customers/{id}`
+-   Endpoint: `/customers/{id}`
 
 -   Method: `DELETE`
 
@@ -236,10 +169,74 @@ Customers API
 
     -   Status Code: `204 (No Content)`
 
-Dealers API
------------
+Cars API
 
--   Endpoint: `/api/dealers`
+-   Endpoint: `/cars`
+
+-   Method: `GET`
+
+-   Description: Get a list of all cars.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: List of cars in JSON format.
+-   Endpoint: `/cars/{id}`
+
+-   Method: `GET`
+
+-   Description: Get a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Car information in JSON format.
+-   Endpoint: `/cars`
+
+-   Method: `POST`
+
+-   Description: Create a new car.
+
+-   Request Body: Car information in JSON format.
+
+-   Response:
+
+    -   Status Code: `201 (Created)`
+    -   Body: Car information of the created car in JSON format.
+-   Endpoint: `/cars/{id}`
+
+-   Method: `PUT`
+
+-   Description: Update a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Request Body: Updated car information in JSON format.
+
+-   Response:
+
+    -   Status Code: `200 (OK)`
+    -   Body: Updated car information in JSON format.
+-   Endpoint: `/cars/{id}`
+
+-   Method: `DELETE`
+
+-   Description: Delete a car by ID.
+
+-   Path Parameters:
+
+    -   `id`: ID of the car.
+-   Response:
+
+    -   Status Code: `204 (No Content)`
+
+Dealer Information API
+
+-   Endpoint: `/dealers`
 
 -   Method: `GET`
 
@@ -249,7 +246,7 @@ Dealers API
 
     -   Status Code: `200 (OK)`
     -   Body: List of dealers in JSON format.
--   Endpoint: `/api/dealers/{id}`
+-   Endpoint: `/dealers/{id}`
 
 -   Method: `GET`
 
@@ -262,19 +259,19 @@ Dealers API
 
     -   Status Code: `200 (OK)`
     -   Body: Dealer information in JSON format.
--   Endpoint: `/api/dealers`
+-   Endpoint: `/dealers`
 
 -   Method: `POST`
 
 -   Description: Create a new dealer.
 
--   Request Body:Dealer information in JSON format.
+-   Request Body: Dealer information in JSON format.
 
 -   Response:
 
     -   Status Code: `201 (Created)`
     -   Body: Dealer information of the created dealer in JSON format.
--   Endpoint: `/api/dealers/{id}`
+-   Endpoint: `/dealers/{id}`
 
 -   Method: `PUT`
 
@@ -289,7 +286,7 @@ Dealers API
 
     -   Status Code: `200 (OK)`
     -   Body: Updated dealer information in JSON format.
--   Endpoint: `/api/dealers/{id}`
+-   Endpoint: `/dealers/{id}`
 
 -   Method: `DELETE`
 
@@ -303,9 +300,8 @@ Dealers API
     -   Status Code: `204 (No Content)`
 
 Orders API
-----------
 
--   Endpoint: `/api/orders`
+-   Endpoint: `/orders`
 
 -   Method: `GET`
 
@@ -315,7 +311,7 @@ Orders API
 
     -   Status Code: `200 (OK)`
     -   Body: List of orders in JSON format.
--   Endpoint: `/api/orders/{id}`
+-   Endpoint: `/orders/{id}`
 
 -   Method: `GET`
 
@@ -328,7 +324,7 @@ Orders API
 
     -   Status Code: `200 (OK)`
     -   Body: Order information in JSON format.
--   Endpoint: `/api/orders`
+-   Endpoint: `/orders`
 
 -   Method: `POST`
 
@@ -340,7 +336,7 @@ Orders API
 
     -   Status Code: `201 (Created)`
     -   Body: Order information of the created order in JSON format.
--   Endpoint: `/api/orders/{id}`
+-   Endpoint: `/orders/{id}`
 
 -   Method: `PUT`
 
@@ -355,7 +351,7 @@ Orders API
 
     -   Status Code: `200 (OK)`
     -   Body: Updated order information in JSON format.
--   Endpoint: `/api/orders/{id}`
+-   Endpoint: `/orders/{id}`
 
 -   Method: `DELETE`
 
@@ -368,4 +364,6 @@ Orders API
 
     -   Status Code: `204 (No Content)`
 
-Note: Replace `{id}` in the endpoint URLs with the actual ID value for specific resource operations. Also, make sure to include the necessary request body and request headers, as required by your API implementation.
+
+Mockup DATABASE: `LoadDatabase.java` is a class that is responsible for loading mockup data into a Java application. It typically contains methods or functions that create and populate mock data for testing or development purposes. The `LoadDatabase` class is used to initialize the application's database with sample data, so that the application can be tested with realistic data during development or demonstration.
+
