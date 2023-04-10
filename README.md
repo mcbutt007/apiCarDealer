@@ -367,3 +367,57 @@ Orders API
 
 Mockup DATABASE: `LoadDatabase.java` is a class that is responsible for loading mockup data into a Java application. It typically contains methods or functions that create and populate mock data for testing or development purposes. The `LoadDatabase` class is used to initialize the application's database with sample data, so that the application can be tested with realistic data during development or demonstration.
 
+Entities:
+
+1.  Car
+
+-   car_id (primary key)
+-   make
+-   model
+-   year
+-   price
+-   mileage
+-   color
+-   image_url
+
+1.  Customer
+
+-   customer_id (primary key)
+-   first_name
+-   last_name
+-   email
+-   phone_number
+-   address
+
+1.  Dealer
+
+-   dealer_id (primary key)
+-   name
+-   location
+-   phone_number
+
+1.  Order
+
+-   order_id (primary key)
+-   customer_id (foreign key referencing Customer)
+-   car_id (foreign key referencing Car)
+-   order_date
+-   total_price
+
+Relationships:
+
+1.  Car-Dealer (many-to-one)
+
+-   car_id (foreign key referencing Car)
+-   dealer_id (foreign key referencing Dealer)
+
+1.  Customer-Order (one-to-many)
+
+-   customer_id (foreign key referencing Customer)
+-   order_id (foreign key referencing Order)
+
+1.  Car-Order (many-to-many)
+
+-   car_id (foreign key referencing Car)
+-   order_id (foreign key referencing Order)
+
